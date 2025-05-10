@@ -38,9 +38,9 @@
     <source src="web.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
-
-  <!-- Mute/Unmute Button -->
-  <button onclick="toggleMute()" style="
+  
+<!-- Mute/Unmute Button -->
+<button onclick="toggleMute()" id="toggle-btn" style="
 position: fixed;
 bottom: 20px;
 right: 20px;
@@ -56,14 +56,18 @@ box-shadow: 0 0 15px #00fff7;
 ">🔊</button>
 
 <script>
-    const audio = document.getElementById("bg-music");
-    const button = document.getElementById("toggle-btn");
+  const audio = document.getElementById("bg-music");
+  const button = document.getElementById("toggle-btn");
 
-    function toggleMute() {
-      audio.muted = !audio.muted;
-      button.textContent = audio.muted ? "🔇" : "🔊";
-    }
-  </script>
+  function toggleMute() {
+    // Toggle the mute state of the audio
+    audio.muted = !audio.muted;
+    
+    // Change button text based on mute state
+    button.textContent = audio.muted ? "🔇" : "🔊";
+  }
+</script>
+
 
   <!-- NavBar -->
   <header class="flex justify-between items-center px-6 py-4 bg-black bg-opacity-70 shadow-md sticky top-0 z-50">
