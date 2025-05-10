@@ -289,16 +289,6 @@ box-shadow: 0 0 15px #00fff7;
   </button>
 </div>
 
-<script>
-  document.getElementById("enter-btn").addEventListener("click", () => {
-    document.getElementById("intro-screen").style.display = "none";
-    const audio = document.getElementById("background-music");
-    audio.volume = 0.5;
-    audio.play().catch(err => {
-      console.log("Autoplay blocked: ", err);
-    });
-  });
-</script>
 </body>
 
 </html>
