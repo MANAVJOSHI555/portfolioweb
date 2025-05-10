@@ -60,11 +60,15 @@ box-shadow: 0 0 15px #00fff7;
   const button = document.getElementById("toggle-btn");
 
   function toggleMute() {
-    // Toggle the mute state of the audio
-    audio.muted = !audio.muted;
-    
-    // Change button text based on mute state
-    button.textContent = audio.muted ? "🔇" : "🔊";
+    if (audio.paused) {
+      // If audio is paused, play it
+      audio.play();
+      button.textContent = "🔊"; // Show unmute icon
+    } else {
+      // If audio is playing, pause it
+      audio.pause();
+      button.textContent = "🔇"; // Show mute icon
+    }
   }
 </script>
 
