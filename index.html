@@ -282,23 +282,6 @@ box-shadow: 0 0 15px #00fff7;
       }
     });
   </script>
-  <!-- Intro Overlay for Autoplay -->
-<div id="intro-screen" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50">
-  <button id="enter-btn" class="px-6 py-3 bg-cyan-400 text-white font-bold text-lg rounded-full hover:bg-cyan-300 transition">
-    Enter Portfolio
-  </button>
-</div>
-  
-<script>
-  document.getElementById("enter-btn").addEventListener("click", () => {
-    document.getElementById("intro-screen").style.display = "none";
-    const audio = document.getElementById("background-music");
-    audio.volume = 0.5;
-    audio.play().catch(err => {
-      console.log("Autoplay blocked: ", err);
-    });
-  });
-</script>
 
 </body>
 
